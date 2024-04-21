@@ -2,7 +2,6 @@ import  { FC } from 'react'
 
 interface NavbarProps {
   onClick: () => void,
-
 }
 
 const Navbar: FC<NavbarProps> = ({onClick} : NavbarProps) => {

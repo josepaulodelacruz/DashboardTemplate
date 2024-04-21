@@ -5,7 +5,7 @@ import Sidebar from './Components/Sidebar'
 import Dashboard from './Pages/Dashboard'
 
 const App: FC = () => {
-  const [isClose, setIsClose] = useState(false)
+  const [isClose, setIsClose] = useState<boolean>(false)
 
   const _handleToggleSidebar = () => {
     setIsClose(!isClose)
