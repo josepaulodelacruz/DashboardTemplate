@@ -1,30 +1,29 @@
-import { FC, useState } from 'react'
-import './App.css'
-import Navbar from './Components/Navbar'
-import Sidebar from './Components/Sidebar'
-import Dashboard from './Pages/Dashboard'
+import { useState } from 'react'
+import { FaBars } from 'react-icons/fa6'
 
-const App: FC = () => {
-  const [isClose, setIsClose] = useState<boolean>(false)
+const App = () => {
+  const [isClose, setIsClose] = useState<boolean>(false);
 
-  const _handleToggleSidebar = () => {
+  const _handleIsCloseSidebar = () => {
     setIsClose(!isClose)
   }
 
   return (
-    <div className='h-screen w-screen'>
-      <div className='flex flex-row h-dvh bg-gray-300'>
-        <Sidebar />
+    <div className={`grid ${isClose && 'grid-cols-[20%_80%]'} h-full`}>
 
-        <div className='container flex flex-col'>
-          <Navbar onClick={_handleToggleSidebar}/>
+      { isClose && <div className='item bg-blue-300'></div> }
 
-          <div className='flex flex-col h-full'>
-            <Dashboard />
+      <div className='flex flex-col h-full'>
+        <nav className='bg-white shadow-black h-20 flex items-center px-5'>
+
+          <div>
+            <FaBars onClick={_handleIsCloseSidebar}/>
           </div>
 
-        </div>
+        </nav>
 
+        <div className='bg-gray-100 h-full'>
+        </div>
       </div>
     </div>
   )
