@@ -1,23 +1,16 @@
-import  { FC } from 'react'
+import { FC } from 'react'
+import { FaBars } from 'react-icons/fa6'
 
 interface NavbarProps {
   onClick: () => void,
 }
 
-const Navbar: FC<NavbarProps> = ({onClick} : NavbarProps) => {
-  return (
-    <nav className='flex items-center justify-between bg-white shadow-sm h-16 px-3'>
-      <div className='flex'>
-        <button onClick={onClick}>
-          {"<=="}
-        </button>
-        <li className='flex text-2xl font-bold px-2'>
-          Project Name
-        </li>
-      </div>
+const Navbar: FC<NavbarProps> = ({ onClick }: NavbarProps) => {
 
-      <div className=''>
-        Username
+  return (
+    <nav className='bg-white shadow-lg h-20 flex items-center px-5'>
+      <div>
+        <FaBars onClick={onClick} />
       </div>
     </nav>
   )
