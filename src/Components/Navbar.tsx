@@ -9,9 +9,11 @@ const Navbar: FC<NavbarProps> = ({ onClick }: NavbarProps) => {
 
   return (
     <nav className='bg-white shadow-lg h-20 flex items-center px-5'>
-      <div>
-        <FaBars onClick={onClick} />
-      </div>
+      <button
+        onClick={onClick}
+        className='border rounded-lg border-gray p-3'>
+        <FaBars />
+      </button>
     </nav>
   )
 }

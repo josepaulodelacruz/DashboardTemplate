@@ -1,3 +1,8 @@
 .item {
   padding: 10px;
 }
+
+body {
+  transform-origin: top left;
+  transform:  scale(1)
+}

@@ -12,9 +12,9 @@ const DashboardLayout = () => {
 
 
   return (
-    <div className={`grid h-full transition-all ${isClose ? 'grid-cols-[20%_80%]' : 'grid-cols-[5%_95%]'}`}>
+    <div className={`grid h-full transition-all ${isClose ? 'grid-cols-[15%_85%]' : 'grid-cols-[5%_95%]'}`}>
 
-      <Sidebar />
+      <Sidebar isClose={isClose} />
 
       <div className='flex flex-col h-full'>
 
