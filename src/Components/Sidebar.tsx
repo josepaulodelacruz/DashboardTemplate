@@ -8,7 +8,7 @@ interface SidebarProps {
 
 const Sidebar: FC<SidebarProps> = ({ isClose }) => {
   return (
-    <div className={`item bg-primary flex flex-col px-5 py-8`}>
+    <div className={`item bg-primary flex flex-col px-5 py-8 h-screen`}>
 
       <ul className='flex h-full flex-col text-white leading-tight '>
         <SidebarIcon
@@ -28,7 +28,7 @@ const Sidebar: FC<SidebarProps> = ({ isClose }) => {
       <div className='flex items-center'>
         <a className='flex flex-row leading-tight gap-8 text-white'>
           <FaLeftLong size={24} color='white' />
-          <span className='text-sm whitespace-nowrap font-bold'>Logout</span>
+          <span style={{ 'opacity': isClose ? '1' : '0' }} className='transition-all text-sm whitespace-nowrap font-bold'>Logout</span>
         </a>
       </div>
 
@@ -49,9 +49,7 @@ const SidebarIcon: FC<SidebarIconProps> = ({ linkName, icon, routePath, isClose 
     <li className='flex items-center pb-5'>
       <Link to={`${routePath}`} className='flex items-center flex-row gap-7'>
         {icon}
-        {
-          isClose && <span style={{ 'fontSize': '12px' }} className='whitespace-nowrap font-bold'>{linkName}</span>
-        }
+        <span style={{ 'fontSize': '12px', 'opacity': isClose ? '1' : '0' }} className='transition-all whitespace-nowrap font-bold'>{linkName}</span>
       </Link>
     </li>
 
