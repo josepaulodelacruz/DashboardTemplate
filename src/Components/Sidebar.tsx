@@ -10,7 +10,7 @@ interface SidebarProps {
 
 const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
   return (
-    <div style={style} className={`item bg-primary flex flex-col pl-5 py-8 h-screen`}>
+    <div style={style} className={`item bg-primary flex flex-col py-8 h-screen`}>
 
       <ul className='flex h-full flex-col text-white leading-tight overflow-y-auto overflow-x-hidden'>
 
@@ -20,7 +20,7 @@ const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
           linkName='Home'
           isClose={isClose!}
         />
-        
+
         <SidebarIcon
           routePath='/users'
           icon={<FaUsers size={24} />}
@@ -29,12 +29,12 @@ const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
         />
       </ul>
 
-      <div className='flex items-center'>
-        <a className='flex flex-row leading-tight gap-8 text-white'>
-          <FaLeftLong size={24} color='white' />
-          <span style={{ 'opacity': isClose ? '1' : '0' }} className='transition-all text-sm whitespace-nowrap font-bold'>Logout</span>
-        </a>
-      </div>
+      <SidebarIcon 
+        routePath='/'
+        icon={ <FaLeftLong size={24} color='white' />}
+        linkName='LOGOUT'
+        isClose={isClose!}
+        />
 
     </div>
   )
@@ -44,19 +44,18 @@ const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
 interface SidebarIconProps {
   linkName?: string,
   icon?: ReactNode
-  routePath?: string,
+  routePath?: string|null,
   isClose: boolean
 }
 
 const SidebarIcon: FC<SidebarIconProps> = ({ linkName, icon, routePath, isClose = false }) => {
   return (
-    <li className='flex items-center pb-5'>
-      <Link to={`${routePath}`} className='flex items-center flex-row gap-7'>
+    <li className='flex items-center'>
+      <Link to={`${routePath}`} className={`flex items-center flex-row gap-7 hover:bg-white hover:bg-opacity-20 rounded-lg flex-1 px-2 mx-2 py-2 transition-colors`}>
         {icon}
-        <span style={{ 'fontSize': '12px', 'opacity': isClose ? '1' : '0' }} className='transition-all whitespace-nowrap font-bold'>{linkName}</span>
+        <span style={{  'fontSize': '12px', 'opacity': isClose ? '1' : '0', 'display': isClose ? 'block' : 'none', 'transitionDelay': isClose ? '0s' : '0.3s' }} className='text-white transition-all whitespace-nowrap font-bold'>{linkName}</span>
       </Link>
     </li>
-
   )
 }
 

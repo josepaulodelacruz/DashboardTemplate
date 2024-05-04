@@ -18,21 +18,6 @@ const Dashboard: FC = () => {
 
       </div>
 
-
-      <div className='grid grid-cols-3 gap-4 '>
-        <Card />
-        <Card />
-        <Card />
-      </div>
-
-      <div className="grid grid-cols-2 gap-5 pt-5">
-
-        <Card />
-        <Card />
-
-      </div>
-
-
     </div>
   )
 

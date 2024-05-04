@@ -11,8 +11,7 @@ const DashboardLayout = () => {
   }
 
   return (
-    <div className={`grid h-full transition-all ${isClose ? 'grid-cols-[15%_85%]' : 'grid-cols-[5%_95%]'}`}>
-
+    <div className={`grid h-full transition-all ${isClose ? 'grid-cols-[15%_85%]' : 'grid-cols-[4%_96%]'}`}>
 
       <Sidebar
         isClose={isClose} />
