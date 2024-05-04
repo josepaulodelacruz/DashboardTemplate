@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       type='button'
       onClick={onClick}
-      className={`rounded-md bg-blue-900 text-white p-2 ${className}`} // Using template literals for better readability
+      className={`btn btn-primary`} // Using template literals for better readability
       disabled={disabled} // Added disabled attribute to the button
     >
       {label}

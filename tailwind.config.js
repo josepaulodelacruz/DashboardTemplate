@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#202225",
-        secondary: "#58652"
+        // primary: "#202225",
+        // secondary: "#58652"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
 }
 

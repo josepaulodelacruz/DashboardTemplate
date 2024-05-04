@@ -10,7 +10,7 @@ interface SidebarProps {
 
 const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
   return (
-    <div style={style} className={`item bg-primary flex flex-col py-8 h-screen`}>
+    <div style={{'backgroundColor': '#202225'}} className={`item bg-primary flex flex-col py-8 h-screen`}>
 
       <ul className='flex h-full flex-col text-white leading-tight overflow-y-auto overflow-x-hidden'>
 
