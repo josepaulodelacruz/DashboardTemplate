@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Sidebar from '../Components/Sidebar'
 import Navbar from '../Components/Navbar'
-import { Outlet  } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const DashboardLayout = () => {
   const [isClose, setIsClose] = useState<boolean>(false)
@@ -10,17 +10,18 @@ const DashboardLayout = () => {
     setIsClose(prevstate => !prevstate);
   }
 
-
   return (
     <div className={`grid h-full transition-all ${isClose ? 'grid-cols-[15%_85%]' : 'grid-cols-[5%_95%]'}`}>
 
-      <Sidebar isClose={isClose} />
 
-      <div className='flex flex-col h-full'>
+      <Sidebar
+        isClose={isClose} />
 
-        <Navbar onClick={_handleIsCloseSidebar}/>
+      <div className='flex flex-col h-screen'>
 
-        <main id='' className='bg-gray-100 h-full'>
+        <Navbar onClick={_handleIsCloseSidebar} />
+
+        <main id='' className='bg-gray-100 h-full overflow-y-auto'>
           <Outlet />
         </main>
       </div>

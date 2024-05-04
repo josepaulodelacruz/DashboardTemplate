@@ -8,7 +8,7 @@ interface NavbarProps {
 const Navbar: FC<NavbarProps> = ({ onClick }: NavbarProps) => {
 
   return (
-    <nav className='bg-white shadow-lg h-20 flex items-center px-5'>
+    <nav className='bg-white shadow-sm h-20 flex items-center px-5'>
       <button
         onClick={onClick}
         className='border rounded-lg border-gray p-3'>

@@ -1,6 +1,8 @@
+import { useEffect, useState } from 'react'
 
 
 const Card = () => {
+
   return (
     <div className="rounded-sm border p-4 bg-white shadow-lg">
 

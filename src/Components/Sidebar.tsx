@@ -1,16 +1,18 @@
-import { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import { FaLeftLong, FaUsers, FaHouse } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 interface SidebarProps {
   isClose?: boolean,
+  style?: React.HtmlHTMLAttributes<string> 
 }
 
-const Sidebar: FC<SidebarProps> = ({ isClose }) => {
+const Sidebar: FC<SidebarProps> = ({ isClose, style }) => {
   return (
-    <div className={`item bg-primary flex flex-col px-5 py-8 h-screen`}>
+    <div style={style}  className={`item bg-primary flex flex-col px-5 py-8`}>
 
       <ul className='flex h-full flex-col text-white leading-tight '>
+
         <SidebarIcon
           routePath='/'
           icon={<FaHouse size={24} />}
