@@ -10,17 +10,16 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   label,
   onClick,
-  className = '', // Set a default value for className
   disabled = false, // Set a default value for disabled
 }) => {
   return (
     <button
       type='button'
       onClick={onClick}
-      className={`btn btn-primary`} // Using template literals for better readability
+      className={`btn btn-primary `} // Using template literals for better readability
       disabled={disabled} // Added disabled attribute to the button
     >
-      {label}
+      <span className='text-white'>{label.toUpperCase()}</span>
     </button>
   );
 };
