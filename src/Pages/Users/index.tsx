@@ -1,7 +1,10 @@
 import Button from '@/Components/Button'
 import '@/index.css'
+import { useNavigate } from 'react-router-dom'
+import RouteModule from '../../Constants/StringRoutes'
 
 const Header = () => {
+  const navigate = useNavigate()
   return (
     <div className='flex h-3 flex-row justify-between items-center mt-5'>
       <h2 className='font-bold font-sans grow '>Users</h2>
@@ -12,7 +15,7 @@ const Header = () => {
           className='bg-white input input-bordered w-full mr-4' />
 
         <Button
-          onClick={() => console.log('user click')}
+          onClick={() => navigate(RouteModule.ADD_USER, { replace: true}) }
           label="ADD USER" />
       </div>
     </div>
@@ -39,8 +42,8 @@ const Users = () => {
 
           <tbody>
             {
-              Array.from({ length: 10 }).map(() =>
-                <tr className='text-center h-[60px]'>
+              Array.from({ length: 10 }).map((item, index) =>
+                <tr key={index} className='text-center h-[60px]'>
                   <td>1</td>
                   <td>Jose Paulo</td>
                   <td>delacruzjosepaulo@gmail.com</td>
