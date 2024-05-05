@@ -43,7 +43,7 @@ const Users = () => {
 
           <tbody>
             {
-              Array.from({ length: 10 }).map((item, index) =>
+              Array.from({ length: 10 }).map((_, index) =>
                 <tr key={index} className='text-center h-[60px]'>
                   <td>1</td>
                   <td>Jose Paulo</td>

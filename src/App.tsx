@@ -1,14 +1,16 @@
+import { AnimatePresence } from 'framer-motion'
 import DashboardLayout from './Layout/DashboardLayout';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Users from '@/Pages/Users';
 import Dashboard from '@/Pages/Dashboard';
 import AddUser from '@/Pages/Users/AddUser';
 
 const App = () => {
+  const location = useLocation()
 
   return (
-    <BrowserRouter>
-      <Routes>
+    <AnimatePresence mode='wait'>
+      <Routes key={location.pathname} location={location.pathname}>
         <Route path='/' element={<DashboardLayout />} >
           <Route index element={<Dashboard />} />
 
@@ -18,7 +20,7 @@ const App = () => {
 
         </Route>
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   )
 }
 
