@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react'
 import { FaLeftLong  } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
-import '../index.css'
+import '@/index.css'
 import {  SidebarMenus } from '@/Constants/StringRoutes'
 
 

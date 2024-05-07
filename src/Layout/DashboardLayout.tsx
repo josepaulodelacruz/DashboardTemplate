@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import Sidebar from '../Components/Sidebar'
-import Navbar from '../Components/Navbar'
+import Sidebar from '@/Components/Sidebar'
+import Navbar from '@/Components/Navbar'
 import { Outlet } from 'react-router-dom'
 
 const DashboardLayout = () => {
