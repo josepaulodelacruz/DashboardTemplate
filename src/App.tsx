@@ -6,7 +6,7 @@ import Dashboard from '@/Pages/Dashboard';
 import AddUser from '@/Pages/Users/AddUser';
 
 const App = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <AnimatePresence mode='wait'>
@@ -24,7 +24,7 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
 
 
 

@@ -53,7 +53,7 @@ interface SidebarIconProps {
 const SidebarIcon: FC<SidebarIconProps> = ({ linkName, icon, routePath, isClose = false, index }) => {
   return (
     <li className='flex items-center' key={index}>
-      <Link to={`${routePath}`} className={`flex items-center flex-row gap-7 hover:bg-white hover:bg-opacity-20 rounded-lg flex-1 px-2 mx-2 py-2 transition-colors`}>
+      <Link  unstable_viewTransition  to={`${routePath}`} className={`flex items-center flex-row gap-7 hover:bg-white hover:bg-opacity-20 rounded-lg flex-1 px-2 mx-2 py-2 transition-colors`}>
         {icon}
         <span style={{ 'fontSize': '12px', 'opacity': isClose ? '1' : '0', 'display': isClose ? 'block' : 'none', 'transitionDelay': isClose ? '0s' : '0.3s' }} className='text-white transition-all whitespace-nowrap font-bold'>{linkName}</span>
       </Link>

@@ -1,4 +1,3 @@
-
 interface InputProps {
   label: string,
   className?: string
@@ -9,7 +8,7 @@ const Input = ({ label, className, placeholder }: InputProps) => {
   return (
     <div className='flex flex-col flex-1'>
       <label>{label}: </label>
-      <input 
+      <input
         type='text'
         placeholder={placeholder}
         className={`input input-bordered bg-white ${className}`} />

@@ -1,7 +1,7 @@
 import Button from '@/Components/Button'
 import '@/index.css'
 import { useNavigate } from 'react-router-dom'
-import RouteModule from '@/Constants/StringRoutes'
+import { RouteModule } from '@/Constants/StringRoutes'
 
 const Header = () => {
   const navigate = useNavigate()
@@ -29,7 +29,7 @@ const Users = () => {
 
       <Header />
 
-      <div className='flex flex-col mt-10 bg-white shadow-sm h-full'>
+      <div className='flex flex-col mt-10 bg-white rounded-xl shadow-sm h-full p-4'>
         <table>
           <thead>
             <tr>

@@ -4,10 +4,10 @@ import Navbar from '@/Components/Navbar'
 import { Outlet } from 'react-router-dom'
 
 const DashboardLayout = () => {
-  const [isClose, setIsClose] = useState<boolean>(false)
+  const [isClose, setIsClose] = useState<boolean>()
 
   const _handleIsCloseSidebar = () => {
-    setIsClose(prevstate => !prevstate);
+    setIsClose(prevstate => !prevstate)
   }
 
   return (
